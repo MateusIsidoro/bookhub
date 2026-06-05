@@ -1,6 +1,5 @@
-// modules/user/user.js
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../config/database');
+import { DataTypes } from 'sequelize';
+import sequelize from '../../config/database.js';
 
 const User = sequelize.define('User', {
   id: {
@@ -33,17 +32,14 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING(255),
     allowNull: true
   },
-  // Diferenciação de permissões (Administrador vs Usuário Comum)
   isAdmin: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   },
-  // Controle de bloqueio conforme requisito 2.2
   isBlocked: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   },
-  // Campos para estatísticas no Painel Administrativo
   booksReadCount: {
     type: DataTypes.INTEGER,
     defaultValue: 0
@@ -53,8 +49,8 @@ const User = sequelize.define('User', {
     defaultValue: 0
   }
 }, {
-  timestamps: true, // Registra data de cadastro e atualizações automaticamente
+  timestamps: true,
   tableName: 'Users'
 });
 
-module.exports = User;
+export default User;

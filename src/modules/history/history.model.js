@@ -1,6 +1,6 @@
 
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../config/database');
+import { DataTypes } from 'sequelize';
+import sequelize from '../../config/database.js';
 
 const ReadingHistory = sequelize.define('ReadingHistory', {
   id: {
@@ -30,4 +30,4 @@ const ReadingHistory = sequelize.define('ReadingHistory', {
   tableName: 'ReadingHistories'
 });
 
-module.exports = ReadingHistory;
+export default ReadingHistory;

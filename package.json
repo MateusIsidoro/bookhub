@@ -2,7 +2,7 @@
   "name": "bookhub-app",
   "version": "1.0.0",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
@@ -17,13 +17,8 @@
   "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.3",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.7",
     "dotenv": "^17.4.2",
-    "ejs": "^5.0.2",
     "express": "^5.2.1",
-    "express-ejs-layouts": "^2.5.1",
-    "express-session": "^1.19.0",
     "http-errors": "^2.0.1",
     "morgan": "^1.10.1",
     "multer": "^2.1.1",
@@ -31,8 +26,8 @@
     "sequelize": "^6.37.8"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
-    "happy-dom": "^20.9.0",
     "nodemon": "^3.1.14",
     "supertest": "^7.2.2",
     "vitest": "^3.2.4"
